@@ -1,0 +1,18 @@
+body {
+    margin : 0 0 0 0;
+    font-family : 'Open Sans';
+}
+
+.column {
+    font-weight: normal;
+    float: left;
+    padding : 1rem 1rem 1rem 1rem;
+    margin: 0px 0px 0px 0px;
+}
+
+.column.left-nav {
+    position : relative;
+    background-color: #69BE28;
+    width : 20vw;
+    height: 100vh;
+}
