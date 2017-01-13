@@ -1,0 +1,42 @@
+/*.navbar {
+    position: absolute;
+    top: 0;
+    right: 80%;
+    bottom: 0;
+    left: 0;
+    background: #720911;
+    text-align: center;
+}*/
+
+.column {
+    font-weight: normal;
+    float: left;
+    padding : 1rem 1rem 1rem 1rem;
+    margin: 0px 0px 0px 0px;
+}
+
+.column.left-nav {
+    position : relative;
+    background-color: #69BE28;
+    width : 20vw;
+    height: 100vh;
+}
+
+.navbar .app-name {
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+}
+
+.navbar .new-room-button {
+    
+}
+
+.navbar .chat-room-list {
+    margin-top: 30px;
+}
+
+.navbar .room-label {
+    padding-bottom: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+}

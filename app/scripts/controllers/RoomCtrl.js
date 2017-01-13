@@ -1,6 +1,6 @@
 (function() {
     function RoomCtrl(Room) {
-        this.roomData = Room.all;
+        this.rooms = Room.all;
     }
 
     angular

@@ -1,31 +1,21 @@
 <main>
     <section class="navbar">
         <a ui-sref="home" class"logo">
-            <img src="assets/images/blabbermouth.png" alt="blabbermouth logo">
+            <img src="assets/images/chatLogo.png" alt="chat logo">
         </a>
-        <h2>Bloc Chat</h2>
-            <p class="chat-rooms" ng-repeat="room in room.roomData">{{ room.$value }}</p>
-    </section>
-</main>
-
-
-<!-- <main>
-    <section class="navbar">
-        <a ui-sref="home" class="logo">
-            <img src="assets/images/bloc-logo-white.png" alt="bloc logo">
-        </a>
-        <h2 class="app-title">{{ home.heroTitle }}</h2> -->
-<!--         Button trigger modal
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newChatroomModal">
-          New Chatroom
-        </button> -->
+        <h2 class="app-name"><strong>Bloc Chat</strong></h2>
+        <div class="chat-rooms">
+            <div class="room-label" ng-repeat="room in rooms.rooms">{{ room.$value }}</div>
+            <!-- <p class="chat-rooms" ng-repeat="room in room.rooms">{{ room.$value }}</p> -->
+            <!-- Button trigger -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newChatroomModal">Begin New Chatroom</button>
         <!-- Modal -->
-<!--         <div class="modal fade" id="newChatroomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="newChatroomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">New Chatroom</h4>
+                        <h4 class="modal-title" id="myModalLabel">Begin New Chatroom</h4>
                     </div>
                     <div class="modal-body">
                         <form ng-submit="homepage.rooms.addRoom(newRoomName)">
@@ -36,9 +26,6 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-<!--         <div class="chat-room-list">
-            <div class="room-label" ng-repeat="room in rooms">{{ room.$value }}</div>
         </div>
     </section>
-</main> -->
+</main>
