@@ -5,7 +5,7 @@
         </a>
         <h2 class="app-name"><strong>Bloc Chat</strong></h2>
         <div class="chat-rooms">
-            <div class="room-label" ng-repeat="room in rooms.rooms">{{ room.$value }}</div>
+            <div class="room-label" ng-repeat="room in room.roomData">{{ room.$value }}</div>
             <!-- <p class="chat-rooms" ng-repeat="room in room.rooms">{{ room.$value }}</p> -->
             <!-- Button trigger -->
             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newChatroomModal">Begin New Chatroom</button>
