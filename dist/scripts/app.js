@@ -9,16 +9,9 @@
         $stateProvider
             .state('home', {
                 url: '/',
-                controller: 'RoomCtrl as room',
+                controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             });
-
-
-        // .state('modal', {
-        //     url:'/add-room',
-        //         controller: 'ModalCtrl as modal',
-        //         templateUrl: '/templates/modal.html'
-        //     });
 
     }
 

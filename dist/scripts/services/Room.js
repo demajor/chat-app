@@ -1,17 +1,16 @@
 (function() {
     function Room($firebaseArray) {
+        var Room = {};
+
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
 
-        var addRoom = function(roomName) {
-            rooms.$add(roomName);
-            $('newChatRoomModal').modal('hide');
+        Room.all = rooms;
+        Room.add = function (room) {
+            rooms.$add(room);
         };
 
-        return {
-            all: rooms
-            addRoom: addRoom
-        };
+        return Room;
     }
 
     angular
@@ -20,29 +19,23 @@
 })();
 
 
+// code from second checkpoint
 // (function() {
 //     function Room($firebaseArray) {
-//         var firebaseRef = firebase.database().ref();
-//         var roomRef = $firebaseArray(firebaseRef.child('rooms'));
-        
-//         var rooms = {
-//             getRooms: getRooms,
-//             addRoom: addRoom
+//         var Room = {};
+
+//         var ref = firebase.database().ref().child("rooms");
+//         var rooms = $firebaseArray(ref);
+
+//         Room.all = rooms;
+//         Room.add = function(roomName) {
+//             rooms.$add(roomName);
+//             $('#newChatroomModal').modal('hide');
 //         };
-        
-//         return rooms;
-        
-//         function getRooms() {
-//             return {
-//                 all: roomRef
-//             }
-//         };
-        
-//         function addRoom(name) {
-//             roomRef.$add(name);
-//         };
+
+//         return Room;
 //     }
-    
+
 //     angular
 //         .module('blocChat')
 //         .factory('Room', ['$firebaseArray', Room]);

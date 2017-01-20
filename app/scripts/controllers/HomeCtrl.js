@@ -4,7 +4,8 @@
         this.addRoom = function() {
             $uibModal.open({
                 templateUrl: '/templates/modal.html',
-                controller: 'ModalCtrl as modal'
+                controller: 'ModalCtrl as modal',
+                size: 'sm'
             });
         }
     }
@@ -14,33 +15,21 @@
         .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
 })();
 
+
+// code from second checkpoint
 // (function() {
-//     function MainCtrl(Room, Message, $uibModal) {
-        
-//         this.rooms = Room.all;
-//         this.currentRoom = "";
-//         this.messages = "";
-//         this.activeRoom = false;
-    
-    
-//         this.open = function() {
-//             var modalInst = $uibModal.open({
-//                 templateUrl: '/templates/modal.html',
-//                 controller: 'ModalInstCtrl', 
-//                 controllerAs: 'modal'
-//                 });
-//         };
-                
-//         this.setRoom = function(roomId, room) {
-//             this.currentRoom = room;
-//             this.messages = Message.getByRoomId(room);
-//             this.activeRoom = true;
+//     function ModalCtrl(Room, $uibModalInstance) {
+//         this.cancel = function () {
+//             $uibModalInstance.dismiss();
 //         };
 
-//     };
- 
-    
+//         this.submit = function () {
+//             Room.add(this.newRoom);
+//             $uibModalInstance.close();
+//         };
+//     }
+
 //     angular
 //         .module('blocChat')
-//         .controller('MainCtrl', ['Room', 'Message', '$uibModal', MainCtrl]);
+//         .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
 // })();

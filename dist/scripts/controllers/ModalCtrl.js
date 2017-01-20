@@ -16,34 +16,30 @@
 })();
 
 
-// (function() {
-//     function ModalInstCtrl($uibModalInstance, Room) {
+// code from 2nd checkpoint
+// (function () {
+//     function ModalCtrl($scope, Room, $uibModalInstance) {
         
-//         this.newRoom = "";
+//         $scope.rooms = Room;    
+//         $scope.newRoom = {name: ''};    
         
-//     /**
-//     @method
-//     @desc saves a new instance of Room and close the modal window
-//     param (room)
-//     */
-//         this.createRoom = function() {
-//             var newRoom = Room.addRoom(this.newRoom);
-//             $uibModalInstance.close();
-//         };
-
-//     /**
-//     @method
-//     @desc close the modal window without save
-//     */
-//         this.cancel = function() {
+        
+//         $scope.cancelCreate = function () {
 //             $uibModalInstance.dismiss('cancel');
 //         };
-            
-//     };
-    
         
+//         $scope.createNewRoom = function(newRoom) {
+//             Room.all.$add({ 
+//                 name: $scope.newRoom.name
+//             });
+            
+//             $uibModalInstance.close();
+//         };
+        
+//     }   
+    
     
 //     angular
 //         .module('blocChat')
-//         .controller('ModalInstCtrl', ['$uibModalInstance', 'Room', ModalInstCtrl]);
+//         .controller('ModalCtrl', ['$scope', 'Room', '$uibModalInstance', ModalCtrl]);
 // })();

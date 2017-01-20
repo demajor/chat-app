@@ -3,29 +3,13 @@
         <a ui-sref="home" class"logo">
             <img src="assets/images/chatLogo.png" alt="chat logo">
         </a>
-        <h2 class="app-name"><strong>Bloc Chat</strong></h2>
+    <h2 class="app-name"><strong>Bloc Chat</strong></h2>
         <div class="chat-rooms">
-            <div class="room-label" ng-repeat="room in room.roomData">{{ room.$value }}</div>
-            <!-- <p class="chat-rooms" ng-repeat="room in room.rooms">{{ room.$value }}</p> -->
             <!-- Button trigger -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newChatroomModal">Begin New Chatroom</button>
-        <!-- Modal -->
-        <div class="modal fade" id="newChatroomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Begin New Chatroom</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form ng-submit="homepage.rooms.addRoom(newRoomName)">
-                            <label for="chatroom-name">Enter Room Name</label>
-                            <input type="text" ng-model="newRoomName" id="chatroom-name">
-                            <input type="submit" value="Create!">
-                        </form>
-                    </div>
-                </div>
-            </div>
+            <button type="button" class="btn btn-primary btn-md" data-toggle="modal" ng-click="home.addRoom()">Create New Chatroom</button>
+            <br><br />
+        <div ng-repeat="room in home.rooms"><h4>{{ room.$value }}</h4>
+            <h4>{{ room.name }}</h4>
         </div>
-    </section>
+    </div>
 </main>
