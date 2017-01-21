@@ -1,45 +1,35 @@
 (function() {
     function ModalCtrl(Room, $uibModalInstance) {
-        this.cancel = function () {
-            $uibModalInstance.dismiss();
-        };
+        
+        this.newRoom = "";
+        
+/**
+@method
+@desc saves a new instance of Room and close the modal window
+param (room)
+*/
+        // this.createRoom = function() {
+        //     var newRoom = Room.addRoom(this.newRoom);
+        //     $uibModalInstance.close();
+        // };
+
 
         this.submit = function () {
-            Room.add(this.newRoom);
+            var newRoom = Room.add(this.newRoom);
             $uibModalInstance.close();
         };
-    }
 
+/**
+@method
+@desc close the modal window without save
+*/
+        this.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        };
+            
+    };
+    
     angular
         .module('blocChat')
         .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
 })();
-
-
-// code from 2nd checkpoint
-// (function () {
-//     function ModalCtrl($scope, Room, $uibModalInstance) {
-        
-//         $scope.rooms = Room;    
-//         $scope.newRoom = {name: ''};    
-        
-        
-//         $scope.cancelCreate = function () {
-//             $uibModalInstance.dismiss('cancel');
-//         };
-        
-//         $scope.createNewRoom = function(newRoom) {
-//             Room.all.$add({ 
-//                 name: $scope.newRoom.name
-//             });
-            
-//             $uibModalInstance.close();
-//         };
-        
-//     }   
-    
-    
-//     angular
-//         .module('blocChat')
-//         .controller('ModalCtrl', ['$scope', 'Room', '$uibModalInstance', ModalCtrl]);
-// })();

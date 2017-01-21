@@ -10,6 +10,16 @@
             rooms.$add(room);
         };
 
+
+
+        var addRoom = function(roomName) {
+            rooms.$add({name: roomName});
+        };
+      
+        var deleteRoom = function(room) {
+            rooms.$remove(room);
+        };  
+
         return Room;
     }
 
@@ -19,24 +29,40 @@
 })();
 
 
-// code from second checkpoint
+
 // (function() {
-//     function Room($firebaseArray) {
-//         var Room = {};
+//   function Room($firebaseArray) {
+//     var ref = firebase.database().ref().child("rooms");
+    
+// /**
+// @desc rooms Variable stores an array of rooms
+// @type {object}
+// */
+//     var rooms = $firebaseArray(ref);
 
-//         var ref = firebase.database().ref().child("rooms");
-//         var rooms = $firebaseArray(ref);
+      
+// /**
+// @desc private function addRoom, return them in an object
+// @desc add a room to the database
+// @param {object} room
+// */
+//     var addRoom = function(roomName) {
+//         rooms.$add({name: roomName});
+//     };
+      
+//     var deleteRoom = function(room) {
+//         rooms.$remove(room);
+//     };  
+         
 
-//         Room.all = rooms;
-//         Room.add = function(roomName) {
-//             rooms.$add(roomName);
-//             $('#newChatroomModal').modal('hide');
-//         };
+//     return {
+//         all: rooms,
+//         addRoom: addRoom,
+//         deleteRoom: deleteRoom
+//     }; 
+//   }
 
-//         return Room;
-//     }
-
-//     angular
-//         .module('blocChat')
-//         .factory('Room', ['$firebaseArray', Room]);
+//   angular
+//     .module('blocChat')
+//     .factory('Room', ['$firebaseArray', Room]);
 // })();

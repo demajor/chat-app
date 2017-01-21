@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="/styles/main.css">
         <link rel="stylesheet" type="text/css" href="/styles/navbar.css">
     </head>
-        <aside class='column left-nav'>
+        
         <ui-view></ui-view>
 
         <!-- jQuery (required for Bootstrap's JS plugin(s)) -->
@@ -40,10 +40,10 @@
                 firebase.initializeApp(config);
         </script>
         <script src="/scripts/app.js"></script>
-        <!-- <script src="/scripts/controllers/RoomCtrl.js"></script> -->
         <script src="/scripts/controllers/ModalCtrl.js"></script>
         <script src="/scripts/controllers/HomeCtrl.js"></script>
+        <script src="/scripts/controllers/MessageCtrl.js"></script>
         <script src="/scripts/services/Room.js"></script>
-        <!-- <script src="/scripts/services/Message.js"></script> -->
+        <script src="/scripts/services/Messages.js"></script>
     </body>
 </html>

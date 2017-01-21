@@ -1,15 +1,24 @@
-<main>
     <section class="navbar">
-        <a ui-sref="home" class"logo">
-            <img src="assets/images/chatLogo.png" alt="chat logo">
-        </a>
-    <h2 class="app-name"><strong>Bloc Chat</strong></h2>
-        <div class="chat-rooms">
-            <!-- Button trigger -->
-            <button type="button" class="btn btn-primary btn-md" data-toggle="modal" ng-click="home.addRoom()">Create New Chatroom</button>
-            <br><br />
-        <div ng-repeat="room in home.rooms"><h4>{{ room.$value }}</h4>
-            <h4>{{ room.name }}</h4>
+        <aside class='column left-nav'>
+            <a ui-sref="home" class"logo">
+                <img src="assets/images/chatLogo.png" alt="chat logo">
+            </a>
+        <h2 class="app-name"><strong>Bloc Chat</strong></h2>
+            <div class="chat-rooms">
+        <!-- Button trigger -->
+            <button type="button" class="btn btn-primary btn-md" ng-click="home.addRoom()">Create New Room</button>
+                <div class="room-list" ng-repeat="room in home.rooms"><h4>{{ room.$value }}</h4>
+                    <div ng-click="home.setRoom(room)">
+                        <div class="room-name" ng-value="room.name">{{ room.name }}</div>
+                    </div>
+                </div> 
+            </div> 
         </div>
-    </div>
-</main>
+    </section>
+
+<section>    
+    <div class="room-message">
+        <div class="room-title"><h1>{{ home.currentRoom.name }}</h1></div>
+        <ng-include src="'/templates/message.html'"></ng-include>
+        </div> 
+</section>
