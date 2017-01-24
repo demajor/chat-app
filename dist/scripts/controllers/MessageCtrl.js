@@ -1,3 +1,5 @@
+// function to send new messages
+
 (function() {
     function MessageCtrl(Message) {
                 

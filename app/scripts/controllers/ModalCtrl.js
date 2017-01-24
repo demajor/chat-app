@@ -1,27 +1,21 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance) {
+    function ModalCtrl($uibModalInstance, Room) {
         
         this.newRoom = "";
         
 /**
 @method
-@desc saves a new instance of Room and close the modal window
+@desc saves a new instance of Room and closes the modal window
 param (room)
 */
-        // this.createRoom = function() {
-        //     var newRoom = Room.addRoom(this.newRoom);
-        //     $uibModalInstance.close();
-        // };
-
-
         this.submit = function () {
-            var newRoom = Room.add(this.newRoom);
+            var newRoom = Room.addRoom(this.newRoom);
             $uibModalInstance.close();
         };
 
 /**
 @method
-@desc close the modal window without save
+@desc close the modal window without saving
 */
         this.cancel = function() {
             $uibModalInstance.dismiss('cancel');
@@ -31,5 +25,5 @@ param (room)
     
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+        .controller('ModalCtrl', ['$uibModalInstance', 'Room', ModalCtrl]);
 })();
