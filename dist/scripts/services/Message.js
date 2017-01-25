@@ -33,7 +33,7 @@ Search for all messages with a given room ID and store in messages Variable
                 username: "current user",
                 content: newMessage,
                 sentAt: Date.now(),
-                roomID: roomId
+                roomId: roomId
             });
     };
       

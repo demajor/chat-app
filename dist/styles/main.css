@@ -5,7 +5,7 @@
 }
 
 html {
-  height: 100%; /* makes sure our HTML takes up 100% of the browser window */
+  height: 100%;  /*makes sure our HTML takes up 100% of the browser window*/ 
   font-size: 100%;
 }
 
@@ -16,108 +16,18 @@ body {
   background-size: cover;*/
   font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
   background-color: #002244; 
-  color: white;             /* sets the text color to white */
+  /*color: white;*/             /* sets the text color to white */
   min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
   padding-bottom: 200px;
 }
 
-
-/*NAVBAR STYLING*/
-.column {
-    font-weight: normal;
-    float: left;
-    padding : 1rem 1rem 1rem 1rem;
-    margin: 0px 0px 0px 0px;
-}
-
-.column.left-nav {
-    position: absolute;
-    /*position : relative;*/
-    top: 0; 
-    bottom: 0; 
-    left: 0;
-    background-color: #69BE28;
-    width : 15vw;
-    height: 100vh;
-}
-
-.navbar .app-name {
-    font-family: 'Libre Baskerville', serif;
+.form-group {
     color: white;
 }
 
-.navbar .chat-room-list {
-    margin-top: 30px;
-}
-
-.navbar .room-label {
-    padding-bottom: 10px;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-.room-list {
-    padding-left: 2.5rem;
-}
-
-.btn btn-md .btn-default {
-    padding-left: 2.5rem;
-}
-
-
-/*MESSAGE BOX STYLING*/
-/*.room-messages {*/
-    /*float: right;*/
-/*    width : 30vw;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #A5ACAF;*/
-/*}*/
-
+/* Flexbox properties */
 @import "compass/css3";
 
-.room-messages {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-
-.room-title {
-    padding: 5px;
-/*    width: 30vw;
-    height: 50px;*/
-    margin-top: 10px;
-    background: #A5ACAF;
-    line-height: 150px;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
-}
-
-
-
-
-
-/*CONTAINER STYLING*/
-/*.container {
-  margin: 0 auto;
-  max-width: 64rem;
-}
-
-.container.narrow {
-  max-width: 56rem;
-}*/
 
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {

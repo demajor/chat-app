@@ -6,7 +6,7 @@
             </a>
         <h2 class="app-name"><strong>Bloc Chat</strong></h2>
             <div class="chat-rooms">
-        <!-- Button trigger -->
+        <!-- Modal button trigger -->
             <button type="button" class="btn btn-primary btn-md" ng-click="home.addRoom()">Create New Room</button>
                 <div class="room-list" ng-repeat="room in home.rooms"><h4>{{ room.$value }}</h4>
                     <div ng-click="home.setRoom(room)">
@@ -23,6 +23,12 @@
         </div> 
     </section>
 </main>
+
+
+
+
+
+
 
 
 <!-- <section>

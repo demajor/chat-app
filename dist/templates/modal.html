@@ -2,28 +2,13 @@
     <div class="modal-header">
         <h3 class="modal-title" id="modal-title">Create New Room</h3>
     </div>
+
     <div class="modal-body" id="modal-body">
-        <label>Enter A Room Name
-            <input type="text" name="name" ng-required="true" ng-model="modal.newRoom">
-        </label>
+        <label for="modal-title">Enter A Room Name</label>
+        <input type="text" name="name" ng-required="true" ng-model="modal.newRoom">
     </div>
     <div class="modal-footer">
         <button class="btn btn-warning" type="button" ng-click="modal.cancel()">Cancel</button>
         <button class="btn btn-primary" type="button" ng-click="modal.submit()">Create Room</button>
     </div>
 </section>
-
-
-<!-- 
-<div class="modal-header">
-    <h3 class="modal-title" id="modal-title">Create New Room</h3>
-</div>
-<div class="modal-body" id="modal-body">
-    <label>Enter a room name
-        <input type="text" name="name" ng-required="true" ng-model="modal.newRoom">
-    </label>
-</div>
-<div class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click="modal.createRoom()">Create Room</button>
-    <button class="btn btn-warning" type="button" ng-click="modal.cancel()">Cancel</button>
-</div> -->
