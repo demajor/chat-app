@@ -1,86 +1,62 @@
 /*NAVBAR STYLING*/
-.column {
-    font-weight: normal;
-    float: left;
-    padding : 1rem 1rem 1rem 1rem;
-    margin: 0px 0px 0px 0px;
-}
-
-.column.left-nav {
-    position: absolute;
-    /*position : relative;*/
-    top: 0; 
-    bottom: 0; 
-    left: 0;
-    background-color: #69BE28;
-    width : 12vw;
-    height: 100vh;
-}
-
-.navbar .app-name {
-    font-family: 'Libre Baskerville', serif;
-    color: white;
-}
-
-.navbar .chat-room-list {
-    margin-top: 30px;
-}
-
-.navbar .room-label {
-    padding-bottom: 10px;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-.room-list {
-    padding-left: 2.5rem;
-}
-
-.btn btn-md .btn-default {
-    padding-left: 2.5rem;
-}
-
-
-
-/*.navbar {
-    position: absolute;
-    top: 0;
-    right: 80%;
-    bottom: 0;
-    left: 0;
-    background: #720911;
-    text-align: center;
-}*/
-
 /*.column {
     font-weight: normal;
     float: left;
     padding : 1rem 1rem 1rem 1rem;
     margin: 0px 0px 0px 0px;
-}
+}*/
 
-.column.left-nav {
-    position : relative;
-    background-color: #69BE28;
-    width : 15vw;
-    height: 100vh;
-}
 
 .navbar .app-name {
     font-family: 'Libre Baskerville', serif;
     color: white;
+    padding: 10px;
+    margin-top: 10px;
+    list-style: none;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-.navbar .new-room-button {
-    
+.column.left-nav {
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0;
+    padding: 10px;
+    width: 12vw;
+    height: 100vw;
+    /*margin-top: 10px;*/
+    background: #69BE28;
+    line-height: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
 }
 
-.navbar .chat-room-list {
+.chat-room-list {
     margin-top: 30px;
 }
 
-.navbar .room-label {
-    padding-bottom: 10px;
+.room-label {
+    font-family: 'Libre Baskerville', serif;
     color: white;
-    font-family: Arial, sans-serif;
-}*/
+    padding-bottom: 10px;
+    
+}
+.room-name {
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+    /*padding-left: 2.5rem;*/
+}
+
+.btn btn-md .btn-default {
+    padding-left: 2.5rem;
+}

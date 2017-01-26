@@ -19,7 +19,35 @@
     height: 5vw;
     margin-top: 10px;
     /*background: #A5ACAF;*/
-    line-height: 150px;
+    line-height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+}
+
+.container {
+    padding: 0;
+    margin-top: 0;
+    list-style: none;
+
+/*    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;*/
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.table.table-striped.table-responsive {
+    padding: 5px;
+    width: 40vw;
+    height: 5vw;
+    margin-top: 10px;
+    background: #A5ACAF;
+    line-height: 50px;
     color: white;
     font-weight: bold;
     font-size: 1em;

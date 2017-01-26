@@ -1,16 +1,16 @@
 <main>
     <section class="navbar">
         <aside class='column left-nav'>
-            <a ui-sref="home" class"logo">
+            <a ui-sref="home" class="logo">
                 <img src="assets/images/chatLogo.png" alt="chat logo">
             </a>
         <h2 class="app-name"><strong>Bloc Chat</strong></h2>
             <div class="chat-rooms">
         <!-- Modal button trigger -->
             <button type="button" class="btn btn-primary btn-md" ng-click="home.addRoom()">Create New Room</button>
-                <div class="room-list" ng-repeat="room in home.rooms"><h4>{{ room.$value }}</h4>
+                <div class="room-list" ng-repeat="room in home.rooms">{{ room.$value }}
                     <div ng-click="home.setRoom(room)">
-                        <div class="room-name" ng-value="room.name">{{ room.name }}</div>
+                        <div class="room-name" ng-value="room.name"><h4>{{ room.name }}</h4></div>
                     </div>
                 </div> 
             </div> 
