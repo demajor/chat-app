@@ -1,8 +1,9 @@
 <div class="container">
     <table class="table-striped table-responsive">
-        <tr ng-repeat="message in home.message">
+        <tr ng-repeat="message in home.messages">
+            <!-- <td>{{ message.username }}</td> -->
             <td>{{ message.content }}</td>
-            <td>{{ message.sentAt | date:"short" }}</td>
+            <td>{{ message.sentAt }}</td>
         </tr>
     </table>
 </div>
@@ -11,6 +12,21 @@
         <label for="message">Message:</label>
         <textarea class="form-control" rows="4" id="message" ng-model="home.content"></textarea>
         <button class="btn btn-primary" type="button" ng-click="home.sendMessage()">Send Message</button>
-        <!-- <button type="submit" class="btn btn-primary" ng-click="home.sendMessage()">Send Message</button> -->
     </div>
 </div>
+
+<!-- INITIAL MESSAGE VIEW CODE -->
+<!-- <div class="container">
+  <h1>{{ home.currentRoom }}</h1>
+  <div ng-repeat="message in home.messages">
+    <p class="username">
+      {{ message.username }}
+    </p>
+    <p class="time">
+      {{ message.sentAt }}
+    </p>
+    <p class="message">
+      {{ message.content }}
+    </p>
+  </div>
+</div> -->

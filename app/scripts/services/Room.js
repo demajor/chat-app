@@ -3,14 +3,13 @@
     var ref = firebase.database().ref().child("rooms");
     
 /**
-@desc rooms Variable stores an array of rooms
+@desc rooms variable stores an array of rooms
 @type {object}
 */
     var rooms = $firebaseArray(ref);
 
-      
 /**
-@desc private function addRoom, returns them in an object
+@desc private function addRoom, returns rooms in an object
 @desc add a room to the database
 @param {object} room
 */
@@ -30,7 +29,7 @@
     }; 
   }
 
-  angular
-    .module('blocChat')
-    .factory('Room', ['$firebaseArray', Room]);
+    angular
+        .module('blocChat')
+        .factory('Room', ['$firebaseArray', Room]);
 })();

@@ -1,27 +1,26 @@
 // Message factory needs to search firebase, return list of messages of current room based on room ID, 
-// which needs to be stored in a variable that the Message controller can access?
+// that needs to be stored into a variable that the Message controller can access....
 // a send function needs to add a new message to firebase using the required keys/values
 
 (function() {
   function Message($firebaseArray, Room) {
-    var ref = firebase.database().ref().child("messages");
+    var ref = firebase.database().ref().child('messages');
       
 /**
 @desc messages Variable stores an array of messages
 @type {object}
 */
-    var messages = "";
+    var messages = {};
 
       
 /**
-Search for all messages with a given room ID and store in messages Variable
+Search for all messages with a given room ID and store in messages variable
 */
     var getByRoomId = function(roomId) {
-        var messagesRef = ref.orderByChild('roomID').equalTo(roomId);
+        var messagesRef = ref.orderByChild('roomId').equalTo(roomId);
         messages = $firebaseArray(messagesRef);
         return messages;
     }; 
-      
       
 /**
 @desc private function send
@@ -29,25 +28,27 @@ Search for all messages with a given room ID and store in messages Variable
 @param {object} message
 */
     var send = function(newMessage, roomId) {
-       messages.$add({
-                username: "current user",
+        var messageDateTime = new Date;
+        messages.$add({
+                username: "current user: ",
                 content: newMessage,
-                sentAt: Date.now(),
+                sentAt: messageDateTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
                 roomId: roomId
             });
     };
       
-
     return {
+        Message,
         getByRoomId: getByRoomId,
         send: send   
     }; 
   }
 
-  angular
-    .module('blocChat')
-    .factory('Message', ['$firebaseArray', 'Room', Message]);
+    angular
+        .module('blocChat')
+        .factory('Message', ['$firebaseArray', 'Room', Message]);
 })();
+
 
 
 // CODE FROM CHECKPOINT 3
@@ -73,23 +74,4 @@ Search for all messages with a given room ID and store in messages Variable
 //   angular
 //     .module('blocChat')
 //     .factory('Messages', ['$cookies', '$firebaseArray', Messages]);  
-// })();
-
-
-
-// (function() {
-//   function Message($firebaseArray) {
-//     var ref = firebase.database().ref().child("messages");
-//     var messages = $firebaseArray(ref);
-
-//     return {
-//       send: function(newMessage) {
-//         messages.$add(newMessage);
-//       }
-//     };
-//   }
-
-//   angular
-//     .module('blocChat')
-//     .factory('Message', ['$firebaseArray', Message]);
 // })();
