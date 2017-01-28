@@ -7,7 +7,7 @@
         <h2 class="app-name"><strong>Bloc Chat</strong></h2>
             <div class="chat-rooms">
         <!-- Modal button trigger -->
-            <button type="button" class="btn btn-primary btn-md" ng-click="home.addRoom()">Create New Room</button>
+            <button type="button" class="btn btn-primary btn-md" ng-click="home.open()">Create New Room</button>
                 <div class="room-list" ng-repeat="room in home.rooms">{{ room.$value }}
                     <div ng-click="home.setRoom(room)">
                         <div class="room-name" ng-value="room.name"><h4>{{ room.name }}</h4></div>

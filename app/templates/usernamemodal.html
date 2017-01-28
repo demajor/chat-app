@@ -1,0 +1,14 @@
+<section class="modal-box">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Enter A Username</h3>
+    </div>
+
+    <div class="modal-body" id="modal-body">
+        <label>Create Username
+        <input type="text" name="name" ng-required="true" ng-model="user.newUsername">
+        </label>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" type="button" ng-click="user.setUsername()">Begin Your Chat</button>
+    </div>
+</section>

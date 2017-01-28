@@ -3,8 +3,7 @@
         <thead>
             <tr>
                 <th>
-                USERNAME PLACEHOLDER
-                <!-- <strong>{{ message.username }}</strong> -->
+                {{ message.username }}
                 </th>
             </tr>
         </thead>
@@ -32,18 +31,17 @@
 
 <!-- <div class="container">
     <table class="table-striped table-responsive">
-        <tr ng-repeat="message in home.messages"> -->
-            <!-- <td>{{ message.username }}</td> -->
-<!--             <td>{{ message.content }}</td>
-            <td>{{ message.sentAt }}</td>
+        <tr ng-repeat="message in main.messages">
+            <td>{{ message.content }}</td>
+            <td>{{ message.username }}</td>
+            <td>{{ message.sentAt | date:"short" }}</td>
         </tr>
     </table>
 </div>
 <div>
     <div class="form-group">
         <label for="message">Message:</label>
-        <textarea class="form-control" rows="4" id="message" ng-model="home.content"></textarea> -->
-        <!-- username should be set before message can be sent -->
-<!--         <button class="btn btn-primary" type="button" ng-click="home.sendMessage()">Send Message</button>
+        <textarea class="form-control" rows="4" id="message" ng-model="main.content"></textarea>
+        <button type="submit" class="btn btn-success btn-sm" ng-click="main.sendMessage()">Send Message</button>
     </div>
 </div> -->

@@ -8,7 +8,7 @@
 @desc saves a new instance of Room and closes the modal window
 param (room)
 */
-        this.submit = function () {
+        this.createRoom = function () {
             var newRoom = Room.addRoom(this.newRoom);
             $uibModalInstance.close();
         };
