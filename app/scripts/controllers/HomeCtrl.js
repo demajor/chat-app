@@ -5,17 +5,6 @@
         this.messages = "";
         this.activeRoom = false;
         this.content = "";
-
-
-        // this.addRoom = function() {
-        //    var modalInst = $uibModal.open({
-        //         templateUrl: '/templates/modal.html',
-        //         controller: 'ModalCtrl',
-        //         controllerAs: 'modal',
-        //         size: 'sm'
-        //     });
-        // };
-
         
         this.open = function() {
             var modalInst = $uibModal.open({
