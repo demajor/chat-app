@@ -34,7 +34,6 @@ Search for all messages with a given room ID and store in messages variable
     };
       
     return {
-        // Message,
         getByRoomId: getByRoomId,
         send: send   
     }; 

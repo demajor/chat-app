@@ -14,6 +14,14 @@
             });
         }
         
+        function resetCookies(key) {
+            $cookies.remove(key);
+        }
+
+        return {
+            currentUser: currentUser,
+            resetCookies: resetCookies
+        };
     }
     
     angular

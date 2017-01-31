@@ -3,7 +3,7 @@
 
 /**
 @method
-@desc saves a new User and close the modal window
+@desc saves a new user and closes the modal window
 param (name)
 */
         this.setUsername = function() {
@@ -16,9 +16,7 @@ param (name)
                 alert("Please Enter A Username")
                 }
             };
-        }
-
-/* need to prevent blank text area from saving */    
+        }   
           
     angular
         .module('blocChat')
