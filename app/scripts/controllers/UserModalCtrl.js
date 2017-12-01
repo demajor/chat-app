@@ -8,7 +8,7 @@ param (name)
 */
         this.setUsername = function() {
             if (this.newUsername && this.newUsername !== '') {
-            
+                    
                 $cookies.blocChatCurrentUser = this.newUsername;
 
                 $uibModalInstance.close();

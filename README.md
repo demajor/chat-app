@@ -1,1 +1,2 @@
-## Bloc Chat Application
+## Chat Application
+## Grunt, JS
